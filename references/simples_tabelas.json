@@ -1,0 +1,907 @@
+{
+  "_meta": {
+    "titulo": "Simples Nacional - Anexos I a V (alíquotas nominais, parcelas a deduzir e partilha)",
+    "ultima_verificacao": "2026-10-16",
+    "aviso": "Confirme sempre no texto vigente antes de usar. Percentuais em decimal (0.04 = 4%). 'ate' = limite superior da RBT12 da faixa, em R$; a faixa começa no limite anterior + R$ 0,01. 'deduzir' = parcela a deduzir, em R$.",
+    "fontes": [
+      "LC 123/2006, Anexos I a V (redação LC 155/2016, vigência 01/01/2018) - https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm",
+      "Resolução CGSN 140/2018, Anexos I a V e arts. 21 a 26 - http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=92278",
+      "LC 214/2025, Anexos XVIII a XXII (nova redação dos Anexos I a V da LC 123 para 2027-2028; Anexo III com redação da LC 227/2026) - https://www.planalto.gov.br/ccivil_03/leis/lcp/Lcp214.htm"
+    ],
+    "formula_aliquota_efetiva": "(RBT12 x aliquota - deduzir) / RBT12 (LC 123, art. 18, § 1º-A; CGSN 140, art. 21, II). Percentual efetivo de cada tributo = alíquota efetiva x partilha (art. 18, § 1º-B). Diferença centesimal vai para o tributo de maior percentual de repartição da faixa (art. 18, § 1º-B, II).",
+    "rbt12": "2026: receita bruta acumulada nos 12 meses anteriores ao período de apuração (LC 123, art. 18, § 1º). A partir de 01/01/2027: 12 meses antecedentes ao mês anterior ao do período de apuração (redação LC 214/2025, art. 517; CGSN 140, art. 21, II, a, redação CGSN 190/2026). Mercado interno e exportação são apurados separadamente (LC 123, art. 3º, § 15). RBT12 igual a zero: considerar R$ 1,00 (CGSN 140, art. 21, parágrafo único). Início de atividade: CGSN 140, art. 22, §§ 2º a 4º.",
+    "fator_r": "Fator r = folha de salários dos 12 meses (salários + pró-labore + CPP efetivamente recolhida + FGTS; excluídos aluguéis e distribuição de lucros) / RBT12 (mercado interno + externo). Atividades do § 5º-I do art. 18: r >= 0,28 -> Anexo III; r < 0,28 -> Anexo V (LC 123, art. 18, §§ 5º-J, 5º-K, 5º-M e 24 a 26; CGSN 140, art. 26).",
+    "limites_reais": {
+      "ME": 360000,
+      "EPP": 4800000,
+      "sublimite_ICMS_ISS_2026_todos_os_estados_inclusive_ES": 3600000,
+      "limite_adicional_exportacao": 4800000,
+      "MEI": 81000
+    }
+  },
+  "anexos_2026": {
+    "I": {
+      "nome": "Comércio - revenda de mercadorias; também venda de produtos com notação NT na TIPI (ex.: extração de minerais NT - SC Cosit 424/2017, 233/2023 e 63/2024)",
+      "faixas": [
+        {
+          "faixa": 1,
+          "ate": 180000,
+          "aliquota": 0.04,
+          "deduzir": 0,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1274,
+            "PIS": 0.0276,
+            "CPP": 0.415,
+            "ICMS": 0.34
+          }
+        },
+        {
+          "faixa": 2,
+          "ate": 360000,
+          "aliquota": 0.073,
+          "deduzir": 5940,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1274,
+            "PIS": 0.0276,
+            "CPP": 0.415,
+            "ICMS": 0.34
+          }
+        },
+        {
+          "faixa": 3,
+          "ate": 720000,
+          "aliquota": 0.095,
+          "deduzir": 13860,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1274,
+            "PIS": 0.0276,
+            "CPP": 0.42,
+            "ICMS": 0.335
+          }
+        },
+        {
+          "faixa": 4,
+          "ate": 1800000,
+          "aliquota": 0.107,
+          "deduzir": 22500,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1274,
+            "PIS": 0.0276,
+            "CPP": 0.42,
+            "ICMS": 0.335
+          }
+        },
+        {
+          "faixa": 5,
+          "ate": 3600000,
+          "aliquota": 0.143,
+          "deduzir": 87300,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1274,
+            "PIS": 0.0276,
+            "CPP": 0.42,
+            "ICMS": 0.335
+          }
+        },
+        {
+          "faixa": 6,
+          "ate": 4800000,
+          "aliquota": 0.19,
+          "deduzir": 378000,
+          "partilha": {
+            "IRPJ": 0.135,
+            "CSLL": 0.1,
+            "COFINS": 0.2827,
+            "PIS": 0.0613,
+            "CPP": 0.421
+          }
+        }
+      ],
+      "observacao": "6ª faixa (RBT12 > R$ 3.600.000,00): a partilha cobre só os tributos federais (soma 1). O ICMS não integra a partilha porque, acima do sublimite de R$ 3,6 mi, é recolhido fora do DAS (LC 123, art. 13-A). Enquanto a receita acumulada NO ANO não ultrapassar o sublimite, o percentual efetivo de ICMS no DAS é calculado pela 5ª faixa: {[(RBT12 x alíquota nominal da 5ª faixa) - parcela a deduzir da 5ª faixa] / RBT12} x percentual de ICMS da 5ª faixa (Resolução CGSN 140/2018, art. 21, III, alínea b). Parcela da receita do ano que exceder o sublimite ou o limite, até o mês anterior aos efeitos do impedimento/exclusão: CGSN 140, art. 24."
+    },
+    "II": {
+      "nome": "Indústria - venda de mercadorias industrializadas pelo contribuinte",
+      "faixas": [
+        {
+          "faixa": 1,
+          "ate": 180000,
+          "aliquota": 0.045,
+          "deduzir": 0,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1151,
+            "PIS": 0.0249,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32
+          }
+        },
+        {
+          "faixa": 2,
+          "ate": 360000,
+          "aliquota": 0.078,
+          "deduzir": 5940,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1151,
+            "PIS": 0.0249,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32
+          }
+        },
+        {
+          "faixa": 3,
+          "ate": 720000,
+          "aliquota": 0.1,
+          "deduzir": 13860,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1151,
+            "PIS": 0.0249,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32
+          }
+        },
+        {
+          "faixa": 4,
+          "ate": 1800000,
+          "aliquota": 0.112,
+          "deduzir": 22500,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1151,
+            "PIS": 0.0249,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32
+          }
+        },
+        {
+          "faixa": 5,
+          "ate": 3600000,
+          "aliquota": 0.147,
+          "deduzir": 85500,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1151,
+            "PIS": 0.0249,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32
+          }
+        },
+        {
+          "faixa": 6,
+          "ate": 4800000,
+          "aliquota": 0.3,
+          "deduzir": 720000,
+          "partilha": {
+            "IRPJ": 0.085,
+            "CSLL": 0.075,
+            "COFINS": 0.2096,
+            "PIS": 0.0454,
+            "CPP": 0.235,
+            "IPI": 0.35
+          }
+        }
+      ],
+      "observacao": "6ª faixa (RBT12 > R$ 3.600.000,00): a partilha cobre só os tributos federais (soma 1). O ICMS não integra a partilha porque, acima do sublimite de R$ 3,6 mi, é recolhido fora do DAS (LC 123, art. 13-A). Enquanto a receita acumulada NO ANO não ultrapassar o sublimite, o percentual efetivo de ICMS no DAS é calculado pela 5ª faixa: {[(RBT12 x alíquota nominal da 5ª faixa) - parcela a deduzir da 5ª faixa] / RBT12} x percentual de ICMS da 5ª faixa (Resolução CGSN 140/2018, art. 21, III, alínea b). Parcela da receita do ano que exceder o sublimite ou o limite, até o mês anterior aos efeitos do impedimento/exclusão: CGSN 140, art. 24. Na 6ª faixa o IPI (35%) permanece no DAS."
+    },
+    "III": {
+      "nome": "Serviços e locação de bens móveis não relacionados no § 5º-C do art. 18; atividades do § 5º-I com Fator r >= 0,28",
+      "faixas": [
+        {
+          "faixa": 1,
+          "ate": 180000,
+          "aliquota": 0.06,
+          "deduzir": 0,
+          "partilha": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "COFINS": 0.1282,
+            "PIS": 0.0278,
+            "CPP": 0.434,
+            "ISS": 0.335
+          }
+        },
+        {
+          "faixa": 2,
+          "ate": 360000,
+          "aliquota": 0.112,
+          "deduzir": 9360,
+          "partilha": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "COFINS": 0.1405,
+            "PIS": 0.0305,
+            "CPP": 0.434,
+            "ISS": 0.32
+          }
+        },
+        {
+          "faixa": 3,
+          "ate": 720000,
+          "aliquota": 0.135,
+          "deduzir": 17640,
+          "partilha": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "COFINS": 0.1364,
+            "PIS": 0.0296,
+            "CPP": 0.434,
+            "ISS": 0.325
+          }
+        },
+        {
+          "faixa": 4,
+          "ate": 1800000,
+          "aliquota": 0.16,
+          "deduzir": 35640,
+          "partilha": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "COFINS": 0.1364,
+            "PIS": 0.0296,
+            "CPP": 0.434,
+            "ISS": 0.325
+          }
+        },
+        {
+          "faixa": 5,
+          "ate": 3600000,
+          "aliquota": 0.21,
+          "deduzir": 125640,
+          "partilha": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "COFINS": 0.1282,
+            "PIS": 0.0278,
+            "CPP": 0.434,
+            "ISS": 0.335
+          }
+        },
+        {
+          "faixa": 6,
+          "ate": 4800000,
+          "aliquota": 0.33,
+          "deduzir": 648000,
+          "partilha": {
+            "IRPJ": 0.35,
+            "CSLL": 0.15,
+            "COFINS": 0.1603,
+            "PIS": 0.0347,
+            "CPP": 0.305
+          }
+        }
+      ],
+      "observacao": "5ª faixa: percentual efetivo máximo de ISS = 5%. Se a alíquota efetiva for superior a 14,92537%, ISS fixo em 5% e os demais = (alíquota efetiva - 5%) x IRPJ 6,02% / CSLL 5,26% / COFINS 19,28% / PIS 4,18% / CPP 65,26% (LC 123, art. 18, § 1º-B, I, e nota do Anexo III). 6ª faixa (RBT12 > R$ 3.600.000,00): a partilha cobre só os tributos federais (soma 1). O ISS não integra a partilha porque, acima do sublimite de R$ 3,6 mi, é recolhido fora do DAS (LC 123, art. 13-A). Enquanto a receita acumulada NO ANO não ultrapassar o sublimite, o percentual efetivo de ISS no DAS é calculado pela 5ª faixa: {[(RBT12 x alíquota nominal da 5ª faixa) - parcela a deduzir da 5ª faixa] / RBT12} x percentual de ISS da 5ª faixa (Resolução CGSN 140/2018, art. 21, III, alínea b). Parcela da receita do ano que exceder o sublimite ou o limite, até o mês anterior aos efeitos do impedimento/exclusão: CGSN 140, art. 24."
+    },
+    "IV": {
+      "nome": "Serviços do § 5º-C do art. 18 (construção e obras de engenharia, vigilância, limpeza/conservação, advocacia) - CPP fora do DAS",
+      "faixas": [
+        {
+          "faixa": 1,
+          "ate": 180000,
+          "aliquota": 0.045,
+          "deduzir": 0,
+          "partilha": {
+            "IRPJ": 0.188,
+            "CSLL": 0.152,
+            "COFINS": 0.1767,
+            "PIS": 0.0383,
+            "ISS": 0.445
+          }
+        },
+        {
+          "faixa": 2,
+          "ate": 360000,
+          "aliquota": 0.09,
+          "deduzir": 8100,
+          "partilha": {
+            "IRPJ": 0.198,
+            "CSLL": 0.152,
+            "COFINS": 0.2055,
+            "PIS": 0.0445,
+            "ISS": 0.4
+          }
+        },
+        {
+          "faixa": 3,
+          "ate": 720000,
+          "aliquota": 0.102,
+          "deduzir": 12420,
+          "partilha": {
+            "IRPJ": 0.208,
+            "CSLL": 0.152,
+            "COFINS": 0.1973,
+            "PIS": 0.0427,
+            "ISS": 0.4
+          }
+        },
+        {
+          "faixa": 4,
+          "ate": 1800000,
+          "aliquota": 0.14,
+          "deduzir": 39780,
+          "partilha": {
+            "IRPJ": 0.178,
+            "CSLL": 0.192,
+            "COFINS": 0.189,
+            "PIS": 0.041,
+            "ISS": 0.4
+          }
+        },
+        {
+          "faixa": 5,
+          "ate": 3600000,
+          "aliquota": 0.22,
+          "deduzir": 183780,
+          "partilha": {
+            "IRPJ": 0.188,
+            "CSLL": 0.192,
+            "COFINS": 0.1808,
+            "PIS": 0.0392,
+            "ISS": 0.4
+          }
+        },
+        {
+          "faixa": 6,
+          "ate": 4800000,
+          "aliquota": 0.33,
+          "deduzir": 828000,
+          "partilha": {
+            "IRPJ": 0.535,
+            "CSLL": 0.215,
+            "COFINS": 0.2055,
+            "PIS": 0.0445
+          }
+        }
+      ],
+      "observacao": "CPP NÃO integra o DAS do Anexo IV: recolhida por fora sobre a folha (Lei 8.212/91, art. 22; LC 123, art. 13, VI, e art. 18, § 5º-C). 5ª faixa: percentual efetivo máximo de ISS = 5%. Se a alíquota efetiva for superior a 12,5%, ISS fixo em 5% e os demais = (alíquota efetiva - 5%) x IRPJ 31,33% / CSLL 32,00% / COFINS 30,13% / PIS 6,54% (nota do Anexo IV). 6ª faixa (RBT12 > R$ 3.600.000,00): a partilha cobre só os tributos federais (soma 1). O ISS não integra a partilha porque, acima do sublimite de R$ 3,6 mi, é recolhido fora do DAS (LC 123, art. 13-A). Enquanto a receita acumulada NO ANO não ultrapassar o sublimite, o percentual efetivo de ISS no DAS é calculado pela 5ª faixa: {[(RBT12 x alíquota nominal da 5ª faixa) - parcela a deduzir da 5ª faixa] / RBT12} x percentual de ISS da 5ª faixa (Resolução CGSN 140/2018, art. 21, III, alínea b). Parcela da receita do ano que exceder o sublimite ou o limite, até o mês anterior aos efeitos do impedimento/exclusão: CGSN 140, art. 24."
+    },
+    "V": {
+      "nome": "Serviços do § 5º-I do art. 18 com Fator r < 0,28",
+      "faixas": [
+        {
+          "faixa": 1,
+          "ate": 180000,
+          "aliquota": 0.155,
+          "deduzir": 0,
+          "partilha": {
+            "IRPJ": 0.25,
+            "CSLL": 0.15,
+            "COFINS": 0.141,
+            "PIS": 0.0305,
+            "CPP": 0.2885,
+            "ISS": 0.14
+          }
+        },
+        {
+          "faixa": 2,
+          "ate": 360000,
+          "aliquota": 0.18,
+          "deduzir": 4500,
+          "partilha": {
+            "IRPJ": 0.23,
+            "CSLL": 0.15,
+            "COFINS": 0.141,
+            "PIS": 0.0305,
+            "CPP": 0.2785,
+            "ISS": 0.17
+          }
+        },
+        {
+          "faixa": 3,
+          "ate": 720000,
+          "aliquota": 0.195,
+          "deduzir": 9900,
+          "partilha": {
+            "IRPJ": 0.24,
+            "CSLL": 0.15,
+            "COFINS": 0.1492,
+            "PIS": 0.0323,
+            "CPP": 0.2385,
+            "ISS": 0.19
+          }
+        },
+        {
+          "faixa": 4,
+          "ate": 1800000,
+          "aliquota": 0.205,
+          "deduzir": 17100,
+          "partilha": {
+            "IRPJ": 0.21,
+            "CSLL": 0.15,
+            "COFINS": 0.1574,
+            "PIS": 0.0341,
+            "CPP": 0.2385,
+            "ISS": 0.21
+          }
+        },
+        {
+          "faixa": 5,
+          "ate": 3600000,
+          "aliquota": 0.23,
+          "deduzir": 62100,
+          "partilha": {
+            "IRPJ": 0.23,
+            "CSLL": 0.125,
+            "COFINS": 0.141,
+            "PIS": 0.0305,
+            "CPP": 0.2385,
+            "ISS": 0.235
+          }
+        },
+        {
+          "faixa": 6,
+          "ate": 4800000,
+          "aliquota": 0.305,
+          "deduzir": 540000,
+          "partilha": {
+            "IRPJ": 0.35,
+            "CSLL": 0.155,
+            "COFINS": 0.1644,
+            "PIS": 0.0356,
+            "CPP": 0.295
+          }
+        }
+      ],
+      "observacao": "Não há nota de teto de ISS no Anexo V. 6ª faixa (RBT12 > R$ 3.600.000,00): a partilha cobre só os tributos federais (soma 1). O ISS não integra a partilha porque, acima do sublimite de R$ 3,6 mi, é recolhido fora do DAS (LC 123, art. 13-A). Enquanto a receita acumulada NO ANO não ultrapassar o sublimite, o percentual efetivo de ISS no DAS é calculado pela 5ª faixa: {[(RBT12 x alíquota nominal da 5ª faixa) - parcela a deduzir da 5ª faixa] / RBT12} x percentual de ISS da 5ª faixa (Resolução CGSN 140/2018, art. 21, III, alínea b). Parcela da receita do ano que exceder o sublimite ou o limite, até o mês anterior aos efeitos do impedimento/exclusão: CGSN 140, art. 24."
+    }
+  },
+  "anexos_2027_2028": {
+    "_aviso": "Tabelas da LC 214/2025 (Anexos XVIII a XXII) para os anos-calendário 2027 e 2028. A partir de 2029 a partilha muda ano a ano (ICMS/ISS -> IBS) e as alíquotas nominais da 6ª faixa voltam a 19,00% / 30,00% / 33,00% / 33,00% / 30,50%. Conferir com os Anexos I a V da CGSN 140 na redação da Resolução CGSN 190/2026 (publicados em PDF).",
+    "I": {
+      "faixas": [
+        {
+          "faixa": 1,
+          "ate": 180000,
+          "aliquota": 0.04,
+          "deduzir": 0,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "CBS": 0.1533,
+            "CPP": 0.415,
+            "ICMS": 0.34,
+            "IBS": 0.0017
+          }
+        },
+        {
+          "faixa": 2,
+          "ate": 360000,
+          "aliquota": 0.073,
+          "deduzir": 5940,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "CBS": 0.1533,
+            "CPP": 0.415,
+            "ICMS": 0.34,
+            "IBS": 0.0017
+          }
+        },
+        {
+          "faixa": 3,
+          "ate": 720000,
+          "aliquota": 0.095,
+          "deduzir": 13860,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "CBS": 0.1533,
+            "CPP": 0.42,
+            "ICMS": 0.335,
+            "IBS": 0.0017
+          }
+        },
+        {
+          "faixa": 4,
+          "ate": 1800000,
+          "aliquota": 0.107,
+          "deduzir": 22500,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "CBS": 0.1533,
+            "CPP": 0.42,
+            "ICMS": 0.335,
+            "IBS": 0.0017
+          }
+        },
+        {
+          "faixa": 5,
+          "ate": 3600000,
+          "aliquota": 0.143,
+          "deduzir": 87300,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "CBS": 0.1533,
+            "CPP": 0.42,
+            "ICMS": 0.335,
+            "IBS": 0.0017
+          }
+        },
+        {
+          "faixa": 6,
+          "ate": 4800000,
+          "aliquota": 0.189,
+          "deduzir": 378000,
+          "partilha": {
+            "IRPJ": 0.1358,
+            "CSLL": 0.1006,
+            "CBS": 0.3402,
+            "CPP": 0.4234
+          }
+        }
+      ],
+      "observacao": "6ª faixa: partilha só com tributos federais; ICMS, ISS e IBS ficam fora do DAS acima do sublimite de R$ 3,6 mi, que a partir de 2027 vale também para o IBS (LC 123, art. 13-A, redação LC 214). A partir de 2027 o IPI fica restrito a produtos com industrialização incentivada na ZFM (ADCT, art. 126, III, a): a venda de industrializados sem IPI mantido passa ao Anexo I (LC 123, art. 18, § 4º, I e II, e § 5º, redação LC 214; CGSN 140, art. 25, § 1º, I e II, redação CGSN 190/2026). Se a ME/EPP optar pelo regime regular de IBS/CBS, deduzem-se do DAS as parcelas de CBS e IBS da faixa (CGSN 140, art. 22-A, redação CGSN 190/2026)."
+    },
+    "II": {
+      "faixas": [
+        {
+          "faixa": 1,
+          "ate": 180000,
+          "aliquota": 0.045,
+          "deduzir": 0,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "CBS": 0.1385,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32,
+            "IBS": 0.0015
+          }
+        },
+        {
+          "faixa": 2,
+          "ate": 360000,
+          "aliquota": 0.078,
+          "deduzir": 5940,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "CBS": 0.1385,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32,
+            "IBS": 0.0015
+          }
+        },
+        {
+          "faixa": 3,
+          "ate": 720000,
+          "aliquota": 0.1,
+          "deduzir": 13860,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "CBS": 0.1385,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32,
+            "IBS": 0.0015
+          }
+        },
+        {
+          "faixa": 4,
+          "ate": 1800000,
+          "aliquota": 0.112,
+          "deduzir": 22500,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "CBS": 0.1385,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32,
+            "IBS": 0.0015
+          }
+        },
+        {
+          "faixa": 5,
+          "ate": 3600000,
+          "aliquota": 0.147,
+          "deduzir": 85500,
+          "partilha": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "CBS": 0.1385,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32,
+            "IBS": 0.0015
+          }
+        },
+        {
+          "faixa": 6,
+          "ate": 4800000,
+          "aliquota": 0.299,
+          "deduzir": 720000,
+          "partilha": {
+            "IRPJ": 0.0853,
+            "CSLL": 0.0753,
+            "CBS": 0.2522,
+            "CPP": 0.2359,
+            "IPI": 0.3513
+          }
+        }
+      ],
+      "observacao": "Anexo II só para industrializados com IPI mantido (ZFM). 6ª faixa: partilha só com tributos federais; ICMS, ISS e IBS ficam fora do DAS acima do sublimite de R$ 3,6 mi, que a partir de 2027 vale também para o IBS (LC 123, art. 13-A, redação LC 214). A partir de 2027 o IPI fica restrito a produtos com industrialização incentivada na ZFM (ADCT, art. 126, III, a): a venda de industrializados sem IPI mantido passa ao Anexo I (LC 123, art. 18, § 4º, I e II, e § 5º, redação LC 214; CGSN 140, art. 25, § 1º, I e II, redação CGSN 190/2026). Se a ME/EPP optar pelo regime regular de IBS/CBS, deduzem-se do DAS as parcelas de CBS e IBS da faixa (CGSN 140, art. 22-A, redação CGSN 190/2026)."
+    },
+    "III": {
+      "faixas": [
+        {
+          "faixa": 1,
+          "ate": 180000,
+          "aliquota": 0.06,
+          "deduzir": 0,
+          "partilha": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "CBS": 0.1543,
+            "CPP": 0.434,
+            "ISS": 0.335,
+            "IBS": 0.0017
+          }
+        },
+        {
+          "faixa": 2,
+          "ate": 360000,
+          "aliquota": 0.112,
+          "deduzir": 9360,
+          "partilha": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "CBS": 0.1691,
+            "CPP": 0.434,
+            "ISS": 0.32,
+            "IBS": 0.0019
+          }
+        },
+        {
+          "faixa": 3,
+          "ate": 720000,
+          "aliquota": 0.135,
+          "deduzir": 17640,
+          "partilha": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "CBS": 0.1641,
+            "CPP": 0.434,
+            "ISS": 0.325,
+            "IBS": 0.0019
+          }
+        },
+        {
+          "faixa": 4,
+          "ate": 1800000,
+          "aliquota": 0.16,
+          "deduzir": 35640,
+          "partilha": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "CBS": 0.1641,
+            "CPP": 0.434,
+            "ISS": 0.325,
+            "IBS": 0.0019
+          }
+        },
+        {
+          "faixa": 5,
+          "ate": 3600000,
+          "aliquota": 0.21,
+          "deduzir": 125640,
+          "partilha": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "CBS": 0.1543,
+            "CPP": 0.434,
+            "ISS": 0.335,
+            "IBS": 0.0017
+          }
+        },
+        {
+          "faixa": 6,
+          "ate": 4800000,
+          "aliquota": 0.329,
+          "deduzir": 648000,
+          "partilha": {
+            "IRPJ": 0.3509,
+            "CSLL": 0.1504,
+            "CBS": 0.1929,
+            "CPP": 0.3058
+          }
+        }
+      ],
+      "observacao": "5ª faixa com alíquota efetiva superior a 14,92537%: ISS fixo em 5%; demais = (alíquota efetiva - 5%) x IRPJ 6,02% / CSLL 5,26% / CBS 23,20% / CPP 65,26% / IBS 0,26%. 6ª faixa: partilha só com tributos federais; ICMS, ISS e IBS ficam fora do DAS acima do sublimite de R$ 3,6 mi, que a partir de 2027 vale também para o IBS (LC 123, art. 13-A, redação LC 214). A partir de 2027 o IPI fica restrito a produtos com industrialização incentivada na ZFM (ADCT, art. 126, III, a): a venda de industrializados sem IPI mantido passa ao Anexo I (LC 123, art. 18, § 4º, I e II, e § 5º, redação LC 214; CGSN 140, art. 25, § 1º, I e II, redação CGSN 190/2026). Se a ME/EPP optar pelo regime regular de IBS/CBS, deduzem-se do DAS as parcelas de CBS e IBS da faixa (CGSN 140, art. 22-A, redação CGSN 190/2026)."
+    },
+    "IV": {
+      "faixas": [
+        {
+          "faixa": 1,
+          "ate": 180000,
+          "aliquota": 0.045,
+          "deduzir": 0,
+          "partilha": {
+            "IRPJ": 0.188,
+            "CSLL": 0.152,
+            "CBS": 0.2126,
+            "ISS": 0.445,
+            "IBS": 0.0024
+          }
+        },
+        {
+          "faixa": 2,
+          "ate": 360000,
+          "aliquota": 0.09,
+          "deduzir": 8100,
+          "partilha": {
+            "IRPJ": 0.198,
+            "CSLL": 0.152,
+            "CBS": 0.2473,
+            "ISS": 0.4,
+            "IBS": 0.0027
+          }
+        },
+        {
+          "faixa": 3,
+          "ate": 720000,
+          "aliquota": 0.102,
+          "deduzir": 12420,
+          "partilha": {
+            "IRPJ": 0.208,
+            "CSLL": 0.152,
+            "CBS": 0.2374,
+            "ISS": 0.4,
+            "IBS": 0.0026
+          }
+        },
+        {
+          "faixa": 4,
+          "ate": 1800000,
+          "aliquota": 0.14,
+          "deduzir": 39780,
+          "partilha": {
+            "IRPJ": 0.178,
+            "CSLL": 0.192,
+            "CBS": 0.2275,
+            "ISS": 0.4,
+            "IBS": 0.0025
+          }
+        },
+        {
+          "faixa": 5,
+          "ate": 3600000,
+          "aliquota": 0.22,
+          "deduzir": 183780,
+          "partilha": {
+            "IRPJ": 0.188,
+            "CSLL": 0.192,
+            "CBS": 0.2176,
+            "ISS": 0.4,
+            "IBS": 0.0024
+          }
+        },
+        {
+          "faixa": 6,
+          "ate": 4800000,
+          "aliquota": 0.329,
+          "deduzir": 828000,
+          "partilha": {
+            "IRPJ": 0.5371,
+            "CSLL": 0.2159,
+            "CBS": 0.247
+          }
+        }
+      ],
+      "observacao": "CPP fora do DAS. 5ª faixa com alíquota efetiva superior a 12,5%: ISS fixo em 5%; demais = (alíquota efetiva - 5%) x IRPJ 31,33% / CSLL 32,00% / CBS 36,27% / IBS 0,40%. 6ª faixa: partilha só com tributos federais; ICMS, ISS e IBS ficam fora do DAS acima do sublimite de R$ 3,6 mi, que a partir de 2027 vale também para o IBS (LC 123, art. 13-A, redação LC 214). A partir de 2027 o IPI fica restrito a produtos com industrialização incentivada na ZFM (ADCT, art. 126, III, a): a venda de industrializados sem IPI mantido passa ao Anexo I (LC 123, art. 18, § 4º, I e II, e § 5º, redação LC 214; CGSN 140, art. 25, § 1º, I e II, redação CGSN 190/2026). Se a ME/EPP optar pelo regime regular de IBS/CBS, deduzem-se do DAS as parcelas de CBS e IBS da faixa (CGSN 140, art. 22-A, redação CGSN 190/2026)."
+    },
+    "V": {
+      "faixas": [
+        {
+          "faixa": 1,
+          "ate": 180000,
+          "aliquota": 0.155,
+          "deduzir": 0,
+          "partilha": {
+            "IRPJ": 0.25,
+            "CSLL": 0.15,
+            "CBS": 0.1696,
+            "CPP": 0.2885,
+            "ISS": 0.14,
+            "IBS": 0.0019
+          }
+        },
+        {
+          "faixa": 2,
+          "ate": 360000,
+          "aliquota": 0.18,
+          "deduzir": 4500,
+          "partilha": {
+            "IRPJ": 0.23,
+            "CSLL": 0.15,
+            "CBS": 0.1696,
+            "CPP": 0.2785,
+            "ISS": 0.17,
+            "IBS": 0.0019
+          }
+        },
+        {
+          "faixa": 3,
+          "ate": 720000,
+          "aliquota": 0.195,
+          "deduzir": 9900,
+          "partilha": {
+            "IRPJ": 0.24,
+            "CSLL": 0.15,
+            "CBS": 0.1795,
+            "CPP": 0.2385,
+            "ISS": 0.19,
+            "IBS": 0.002
+          }
+        },
+        {
+          "faixa": 4,
+          "ate": 1800000,
+          "aliquota": 0.205,
+          "deduzir": 17100,
+          "partilha": {
+            "IRPJ": 0.21,
+            "CSLL": 0.15,
+            "CBS": 0.1894,
+            "CPP": 0.2385,
+            "ISS": 0.21,
+            "IBS": 0.0021
+          }
+        },
+        {
+          "faixa": 5,
+          "ate": 3600000,
+          "aliquota": 0.23,
+          "deduzir": 62100,
+          "partilha": {
+            "IRPJ": 0.23,
+            "CSLL": 0.125,
+            "CBS": 0.1696,
+            "CPP": 0.2385,
+            "ISS": 0.235,
+            "IBS": 0.0019
+          }
+        },
+        {
+          "faixa": 6,
+          "ate": 4800000,
+          "aliquota": 0.304,
+          "deduzir": 540000,
+          "partilha": {
+            "IRPJ": 0.351,
+            "CSLL": 0.1554,
+            "CBS": 0.1978,
+            "CPP": 0.2958
+          }
+        }
+      ],
+      "observacao": "6ª faixa: partilha só com tributos federais; ICMS, ISS e IBS ficam fora do DAS acima do sublimite de R$ 3,6 mi, que a partir de 2027 vale também para o IBS (LC 123, art. 13-A, redação LC 214). A partir de 2027 o IPI fica restrito a produtos com industrialização incentivada na ZFM (ADCT, art. 126, III, a): a venda de industrializados sem IPI mantido passa ao Anexo I (LC 123, art. 18, § 4º, I e II, e § 5º, redação LC 214; CGSN 140, art. 25, § 1º, I e II, redação CGSN 190/2026). Se a ME/EPP optar pelo regime regular de IBS/CBS, deduzem-se do DAS as parcelas de CBS e IBS da faixa (CGSN 140, art. 22-A, redação CGSN 190/2026)."
+    }
+  }
+}

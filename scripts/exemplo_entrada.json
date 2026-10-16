@@ -1,0 +1,46 @@
+{
+  "_comentario": "Exemplo FICTÍCIO de mineradora/indústria no ES. Valores anuais em R$. Ver convenções no topo de simulador_regimes.py.",
+  "ano_calendario": 2026,
+  "atividade": "mineracao",
+  "anexo_simples": "II",
+
+  "receita_bruta": 9000000,
+  "rbt12": 9000000,
+  "outras_receitas": 120000,
+  "receitas_financeiras": 120000,
+  "receitas_exportacao": 0,
+  "receitas_pis_cofins_aliquota_zero": 0,
+  "receitas_aliquota_zero_lc224": 1500000,
+  "icms_debitos_saidas": 950000,
+
+  "custos_despesas_operacionais": 6900000,
+  "folha_salarios": 1400000,
+  "pro_labore": 180000,
+  "encargos_patronais_percentual": 0.288,
+  "rat_fap": 0.03,
+
+  "icms_liquido_regime_normal": 520000,
+  "ipi_liquido_regime_normal": 0,
+
+  "compras_creditaveis_pis_cofins": 3100000,
+  "adicoes_lalur": 40000,
+  "exclusoes_lalur": 0,
+  "prejuizo_fiscal_acumulado": 0,
+  "base_negativa_csll_acumulada": 0,
+  "jcp": 0,
+  "incentivo_sudene": false,
+
+  "segregacoes_simples": [],
+
+  "reforma": {
+    "aliquota_cbs_referencia": 0.092,
+    "aliquota_ibs_referencia": 0.187,
+    "compras_creditaveis_ibs_cbs": 3600000,
+    "parcela_receita_com_reducao": 0.0,
+    "reducao_aliquota": 0.0,
+    "valor_extracao_is": 0,
+    "aliquota_is_extracao": 0.0025
+  },
+
+  "parametros": {}
+}

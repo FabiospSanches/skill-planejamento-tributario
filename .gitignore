@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+# dados de clientes nunca devem ser versionados
+clientes/
+*.local.json
